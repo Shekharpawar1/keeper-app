@@ -1,17 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, {Fragment, StrictMode}  from "react";
+import ReactDom from "react-dom";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import "./style.css"
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//importing the module from the different js files
+//import App from "./App"
+import Header from "./Header"
+import Footer  from "./Footer";
+
+const rootElement=document.getElementById("root");
+const element=(<React.Fragment>
+  <Header/>
+  <Footer/>
+</React.Fragment>)
+
+// ReactDom.render({return (
+//   <React.Fragment>
+//     <Header/>
+//     <Footer/>
+//   </React.Fragment>
+// );
+// },rootElement)
+
+ReactDom.render(element,rootElement)
+ 
+
+
