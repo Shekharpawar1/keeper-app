@@ -1,5 +1,5 @@
-import "./style.css"
 
+import "./Styles.css"
 let currentYear = new Date().getFullYear();
 
 export default function Footer(){
